@@ -1,108 +1,68 @@
-# Setup Boilerplate
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-1. npm i
-2. npm i dotenv
-3. create .env
-4. npx install-peerdeps --dev eslint-config-airbnb
+## Available Scripts
 
-This repo is setup to begin working immediately with AirBNB code style rules, using ESLint for warnings and errors, Prettier as a formatter and configured for VS Code.
+In the project directory, you can run:
 
-## IF you're cloning this repo and building off of it you'll need to:
+### `npm start`
 
-1. Fork & Clone
-2. `cd eslint-boilerplate-configs`
-3. `npm i` to install dependencies
-4. `npx install-peerdeps --dev eslint-config-airbnb` to install peer dependencies and `npm i dotenv` and create .env file
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-5. Install Prettier and Eslint Extensions for VS Code
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-   1. Go to VSC Settings (CMD + , || CTRL + ,)
-   1. Search Save => Format on Save
-   1. Search ESLint => Always show status
-   1. Search Default Formatter => choose esbenp.prettier.vs-code
-   1. Search Prettier => add path: `.prettierrc`
-   1. Search Prettier semi => semi-colons - check
-   1. Search Prettier single => single quotes - check
-   1. Search Prettier arrow parens => parens - check
+### `npm test`
 
-## ELSE if you're just using these config files a starting point follow these instructions:
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. create a new repo
-2. clone new repo
-3. cd into the new repo
-4. Initialize as an NPM Package and create a package.json file by running the command: `npm init -y` || `npm init` and answer each of the questions
+### `npm run build`
 
-- name> => [REPO_NAME],
-- description? => ENTER || "A description.....",
-- version "1.0.0" => ENTER || YES
-- main? => ENTER || index.js
-- test? => ENTER || `mocha —no-timeouts`
-- repository? => ENTER || "https://github.com/ashleygwilliams/my_package.git"
-- keywords? => ENTER || ["a", "few", "words", "that", "describe", "it"],
-- author? => ENTER || [YOU]
-- license ISC? => ENTER || YES
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-5. `npm i -D eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-node eslint-config-node`
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-6. Install Prettier and Eslint Extensions for VS Code
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-   1. Go to VSC Settings (CMD + , || CTRL + ,)
-   1. Search Save => Format on Save
-   1. Search ESLint => Always show status
-   1. Search Default Formatter => choose esbenp.prettier.vs-code
-   1. Search Prettier => add path: `.prettierrc`
-   1. Search Prettier semi => semi-colons - check
-   1. Search Prettier single => single quotes - check
-   1. Search Prettier arrow parens => parens - check
+### `npm run eject`
 
-7. Install Peer Dependencies: `npx install-peerdeps --dev eslint-config-airbnb`
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-- Docs on [eslint-config-airbnb - npm](https://www.npmjs.com/package/eslint-config-airbnb)
-  - Docs on [Airbnb Style Guide](https://github.com/airbnb/javascript)
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-8. Create a Prettier Configuration file: `touch .prettierrc`
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-- Add rules using [Prettier Options](https://prettier.io/docs/en/options.html)
-- Copy/Paste the example rules below:
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-  ```json
-  {
-    "singleQuotes": true,
-    "arrowParens": "always",
-    "semi": false
-  }
-  ```
+## Learn More
 
-9. Install ESLint globally: `npm i -g eslint` || `sudo npm i -g eslint`
-10. Create the ESLint configuration file by running the `eslint --init` && Walk through the steps in your console
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```console
-  eslint --init
-  ~? How would you like to configure ESLint? > Use a popular style guide
-  ~? Which style guide do you want to follow? > Airbnb
-  ~? Do you use React? > Yes
-  ~? What format do you want your config file to be in? > JSON
-  Checking peerDependencies of eslint-config-airbnb@latest
-  ~? The style guide "airbnb" requires eslint@^5.16.0 || ^6.8.0 || ^7.2.0. You are currently using eslint@4.19.1.
-  Do you want to upgrade? > Yes
-  Installing eslint-config-airbnb@latest....etc.....
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-11. In the `.eslintrc.json` file that was created copy/paste this JSON Object to replace what is automatically create there.
+### Code Splitting
 
-```json
-{
-  "extends": ["airbnb", "prettier", "plugin:node/recommended"],
-  "plugins": ["prettier"],
-  "rules": {
-    "prettier/prettier": "error",
-    "no-unused-vars": "error",
-    "no-console": "warn",
-    "func-names": "off",
-    "object-shorthand": "warn",
-    "class-methods-use-this": "warn"
-  }
-}
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-12. Learn more about [ESLint Rules](https://eslint.org/docs/rules/) and use more of them.
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
